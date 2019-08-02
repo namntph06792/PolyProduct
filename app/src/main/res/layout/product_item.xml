@@ -1,27 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:id="@+id/linearLayout"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
-    <TextView
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="10">
+    
+    <LinearLayout 
+        android:layout_width="0dp" 
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="8dp">
+        
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/item_product"/>
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="8"
+        android:orientation="vertical">
+
+        <TextView
             android:id="@+id/tvName"
+            android:padding="8dp"
+            android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="2dip"
-            android:textColor="@color/colorAccent" />
+            android:textColor="@color/colorAccent"
+            android:textStyle="italic|bold"/>
 
-    <TextView
+        <TextView
             android:id="@+id/tvPrire"
+            android:textSize="12sp"
+            android:padding="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#5d5d5d"
             android:textStyle="bold" />
-    <TextView
+
+        <TextView
             android:id="@+id/tvDescription"
+            android:textSize="12sp"
+            android:padding="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#5d5d5d"
             android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/add_cart"/>
+
+    </LinearLayout>
 
 </LinearLayout>
